@@ -131,10 +131,15 @@
     async function main() {
       // alert("LINE Developers x Skooldio")
       await liff.init({ liffId: "1657315882-2z8P3vJP" }) // we can pull 4 info of user
-      getEnvironment()
-      getUserProfile()
-      getContext()
-      getFriendship()
+      document.getElementById("isLoggedIn").append(liff.isLoggedIn()) // boolean result
+      
+      if(liff.isLoggedIn()){ // didnt login cant use
+        getEnvironment()
+        getUserProfile()
+        getContext()
+        getFriendship()
+      }
+      
       // createUniversalLink()
     }
     main()
