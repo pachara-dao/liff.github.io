@@ -54,9 +54,10 @@
     }
 
     function closed() {
+      liff.closeWindow()
     }
 
-    async function scanCode() {
+    async function scanCode() { // not working ka
       const result = await liff.scanCode()
       document.getElementById("scanCode").append(result.value)
     }
@@ -64,7 +65,7 @@
     function openWindow() {
       liff.openWindow({
         url: "https://line.me",
-        external: true
+        external: false
       })
     }
 
