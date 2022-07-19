@@ -79,9 +79,9 @@
       document.getElementById("language").append(liff.getLanguage())
       document.getElementById("version").append(liff.getVersion())
       document.getElementById("accessToken").append(liff.getAccessToken())
-      document.getElementById("isInClient").append(liff.getIsInClient()) //return true false
+      document.getElementById("isInClient").append(liff.isInClient()) //return true false
       
-      if(liff.getIsInClient()){
+      if(liff.isInClient()){
         document.getElementById("btnLogOut").style.display = "none" // auto login, so no need to logout
       } else {
         document.getElementById("btnMsg").style.display = "none" // these thing external browser cant do
